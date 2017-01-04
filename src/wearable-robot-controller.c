@@ -51,7 +51,8 @@ void on_sensor_event(sensor_h sensor, sensor_event_s *event, void *user_data)
     	char a[100];
     	sprintf(a,"%f", event->values[0]);
     	elm_object_text_set(event_label, a);
-    	send_udp(1,2);
+    	float x = event->values[0] / 1.0;
+    	send_udp(x);
     	break;
     default:
         dlog_print(DLOG_ERROR, LOG_TAG, "Not an HRM event");

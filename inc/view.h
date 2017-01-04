@@ -28,7 +28,7 @@ void error(char *msg);
 void eprint(char *msg);
 int send_udp_one(void);
 void eprint(char *msg);
-int send_udp(int x, int y);
+int send_udp(float x);
 int init_udp(void);
 void print_debugf(float x);
 #endif

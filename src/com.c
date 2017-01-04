@@ -162,21 +162,14 @@ int init_udp(void)
 
 }
 
-int send_udp(int x, int y)
+int send_udp(float x)
 {
     /* get a message from the user */
     char buf[256];
 
-	char *s1 = "joy left";
-	double k = 1.4;
-	double xf = (x/360.0 * 2.0 - 1.0) * k;
-	double yf = -(y/360.0 * 2.0 - 1.0) * k;
+	char *s1 = "heart rate";
 
-	if(xf >  1.0) xf = 1.0;
-	if(xf < -1.0) xf = -1.0;
-	if(yf >  1.0) yf = 1.0;
-	if(yf < -1.0) yf = -1.0;
-	snprintf(buf, 256, "%s %.3f %.3f", s1, xf, yf);
+	snprintf(buf, 256, "%s %.3f", s1, x);
 
 
     /* send the message to the server */
