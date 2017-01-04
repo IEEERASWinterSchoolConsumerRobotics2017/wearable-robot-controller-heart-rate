@@ -22,19 +22,13 @@
 /*
  * Create a view
  */
-void view_create(void);
-Evas_Object *view_create_win(const char *pkg_name);
-void view_destroy(void);
-void win_delete_request_cb(void *data, Evas_Object *obj, void *event_info);
-void win_back_cb(void *data, Evas_Object *obj, void *event_info);
-void win_resize_cb(void *data, Evas *e , Evas_Object *obj , void *event_info);
-void start_cairo_drawing(void);
-void mouse_down_cb(void *data, Evas *e, Evas_Object *obj, void *event_info);
-void mouse_move_cb(void *data, Evas *e, Evas_Object *obj, void *event_info);
-void mouse_up_cb(void *data, Evas *e, Evas_Object *obj, void *event_info);
 void print_debug(int x, int y);
+void print_debugf(float x);
+void error(char *msg);
+void eprint(char *msg);
 int send_udp_one(void);
 void eprint(char *msg);
 int send_udp(int x, int y);
 int init_udp(void);
+void print_debugf(float x);
 #endif
