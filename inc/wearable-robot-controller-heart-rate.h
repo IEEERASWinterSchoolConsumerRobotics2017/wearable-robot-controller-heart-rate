@@ -23,6 +23,7 @@
 #include <efl_extension.h>
 #include <sensor.h>
 #include "view.h"
+#include <unistd.h>
 
 #define _PRINT_MSG_LOG_BUFFER_SIZE_ 1024
 #define PRINT_MSG(fmt, args...) do { char _log_[_PRINT_MSG_LOG_BUFFER_SIZE_]; \
